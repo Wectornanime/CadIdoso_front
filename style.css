@@ -1,0 +1,239 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    
+    --primary-color: #00B1FD;
+    --second-color: #7ED8FF;
+    
+    
+    --input-color: #ECECEC;
+    --session-color: #FAFAFA;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--primary-font);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+header {
+    width: 100vw;
+    height: 20%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    height: 100%;
+}
+
+nav {
+    background-color: var(--second-color);
+    color: white;
+    width: 50%;
+    padding: 5px 0;
+    border-radius: 20px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav > ul > li {
+    font-family: var(--primary-font);
+    cursor: pointer;
+}
+
+main {
+    height: 80%;
+    width: 900px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+}
+
+main > .content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+
+section {
+    height: 90%;
+    width: 700px;
+    margin: 0 100px;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--session-color);
+    box-shadow: 20px 30px 15px rgba(0, 0, 0, 0.322);
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: var(--primary-font);
+}
+
+input {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    border: none;
+    background-color: var(--input-color);
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.322);
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button.secondary {
+    background-color: var(--second-color);
+    color: white;
+}
+
+button.edit {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button.del {
+    background-color: red;
+    color: white;
+}
+
+
+/* section cad */
+section.cad form {
+    font-family: var(--primary-font);
+}
+
+section.cad input#name {
+    width: 300px;
+}
+
+section.cad button {
+    margin-top: auto;
+    margin-bottom: 25px;
+    padding: 5px 15px;
+}
+
+
+/* section list */
+section.list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    overflow:auto ;
+    width: 95%;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+section.list li {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 350px;
+    height: 30px;
+    padding: 5px;
+}
+
+
+
+/* section.list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 10px;
+    row-gap: 5px;
+    overflow: ;
+}
+
+section.list li {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+} */
+
+
+
+
+
+
+
+
+
+/* pop */
+
+span.popInfo {
+    visibility: hidden;
+    background-color: white;
+    position: fixed;
+    border-radius: 20px;
+    width: 500px;
+    height: 250px;
+    gap: 5px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0px);
+
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+span.popInfo h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+span.popInfo button {
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: auto;
+    margin-bottom: 0px;
+}
